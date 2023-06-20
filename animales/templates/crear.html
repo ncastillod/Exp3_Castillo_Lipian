@@ -25,7 +25,8 @@
                 rules: {
                     id: "required",
                     nombre: "required",
-                    peso: "required",
+                    precio: "required",
+                    cantidad: "required",
                     descripcion: "required",
                     categoria: "required",
 
@@ -39,8 +40,11 @@
                     nombre: {
                         required: 'Nombre del producto',
                     },
-                    peso: {
-                        required: 'Peso del producto',
+                    precio: {
+                        required: 'Precio del producto',
+                    },
+                    cantidad: {
+                        required: 'Cantidad en inventario',
                     },
                     descripcion: {
                         required: 'Descripción del producto',
@@ -161,9 +165,16 @@
 
             <div class="row">
                 <label for="{{ productoform.field.name}}">
-                    {{productoform.peso.label}}
+                    {{productoform.precio.label}}
                 </label>
-                {{ productoform.peso}}
+                {{ productoform.precio}}
+            </div>
+
+            <div class="row">
+                <label for="{{ productoform.field.name}}">
+                    {{productoform.cantidad.label}}
+                </label>
+                {{ productoform.cantidad}}
             </div>
 
             <div class="row">
